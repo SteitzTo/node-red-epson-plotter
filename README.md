@@ -35,7 +35,7 @@ There are some thresholds deposit, if the fillin level falls below 10ml.
 
 -------------------------------------------
 
-Hoffe ich kann jemand damit helfen.
+
 
 Greetings Torsten
 
