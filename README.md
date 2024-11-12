@@ -21,7 +21,7 @@ Node-Red read over the SNMP Protocol the fill stands of every Inkcartidge and wr
 
 Grafana read the InfluxDB and visualized the values as gauge. 
 
-There are some thresholds deposit, if the fillin level falls below 10ml.
+There are some thresholds deposit, if the filling level falls below 10ml.
 
 
 ## Node Red-Flow
