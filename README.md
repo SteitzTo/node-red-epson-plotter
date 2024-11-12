@@ -15,5 +15,14 @@ A Working Influx Database
 
 A Working Grafana Installation
 
+## Node Red-Flow
+
+![Node-Red-Epson](https://github.com/user-attachments/assets/a5f746a0-a818-4cb1-9c09-b6b5404535aa)
+
+## Grafana
+![Grafana-Epson](https://github.com/user-attachments/assets/40774f93-7318-4f44-b8a3-cd643901fabc)
+
+
+
 
 
