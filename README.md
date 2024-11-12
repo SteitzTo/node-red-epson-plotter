@@ -1,9 +1,9 @@
 # node-red-epson-plotter
 
-On my Work we have a new Epson SC-T5700 PLotter and i monitor the Inkfill stands with
+On my work we have a new Epson SC-T5700 Plotter and I monitor the Ink fill stands with
 Node-Red and Grafana.
 
-Here are the Flows and the Grafana Dasboard
+Here are the Flows and the Grafana Dasboard.
 
 ## Dependencies:
 
