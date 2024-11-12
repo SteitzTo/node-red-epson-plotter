@@ -15,12 +15,29 @@ A Working Influx Database
 
 A Working Grafana Installation
 
+## Workflow
+
+Node-Red read over the SNMP Protocol the fill stands of every Inkcartidge and write it into an InfluxDB
+
+Grafana read the InfluxDB and visualized the values as gauge. 
+
+There are some thresholds deposit, if the fillin level falls below 10ml.
+
+
 ## Node Red-Flow
 
 ![Node-Red-Epson](https://github.com/user-attachments/assets/a5f746a0-a818-4cb1-9c09-b6b5404535aa)
 
 ## Grafana
 ![Grafana-Epson](https://github.com/user-attachments/assets/40774f93-7318-4f44-b8a3-cd643901fabc)
+
+
+
+-------------------------------------------
+
+Hoffe ich kann jemand damit helfen.
+
+Greetings Torsten
 
 
 
