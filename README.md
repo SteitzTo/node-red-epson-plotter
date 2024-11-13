@@ -21,7 +21,7 @@ Node-Red read over the SNMP Protocol the fill stands of every Inkcartidge and wr
 
 Grafana read the InfluxDB and visualized the values as gauge. 
 
-There are some thresholds deposit, if the filling level falls below 10ml.
+There are some thresholds deposit, if the filling level falls below 10%.
 
 
 ## Node Red-Flow
@@ -29,7 +29,8 @@ There are some thresholds deposit, if the filling level falls below 10ml.
 ![Node-Red-Epson](https://github.com/user-attachments/assets/a5f746a0-a818-4cb1-9c09-b6b5404535aa)
 
 ## Grafana
-![Grafana-Epson](https://github.com/user-attachments/assets/40774f93-7318-4f44-b8a3-cd643901fabc)
+![Zwischenablage_11-13-2024_01](https://github.com/user-attachments/assets/a5ae9fdc-a14a-4b61-a3c7-debc4fe15ffd)
+
 
 
 
