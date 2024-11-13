@@ -1,0 +1,847 @@
+[
+    {
+        "id": "07581e02265d8f2e",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dc2ee62db845ec3c",
+        "type": "comment",
+        "z": "07581e02265d8f2e",
+        "name": "PL1-EG",
+        "info": "",
+        "x": 690,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8313d17d9be46647",
+        "type": "debug",
+        "z": "07581e02265d8f2e",
+        "name": "debug 51",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b4535aa107f5fcfb",
+        "type": "inject",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "896fc3fb5e50ce74",
+                "198b86f615ccc489",
+                "e3695730d355b4bf",
+                "a6e7d8eb77c91411",
+                "50cc5f4be5668ae2",
+                "f696129bed1d2563",
+                "d491530566a14564",
+                "9fc0be035a4810e8",
+                "f0ad8facac53a0a7"
+            ]
+        ]
+    },
+    {
+        "id": "d9d51da8dd532694",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "982a4807dc77e0d3"
+            ]
+        ]
+    },
+    {
+        "id": "d434d0c25137a0a9",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Gelb",
+        "measurement": "toneryellow",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "721c3aa1a759c5ac",
+        "type": "comment",
+        "z": "07581e02265d8f2e",
+        "name": "Tonerstände",
+        "info": "",
+        "x": 190,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "896fc3fb5e50ce74",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.1\n\n\n",
+        "name": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "d9d51da8dd532694"
+            ]
+        ]
+    },
+    {
+        "id": "c085b29c0516a71a",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "10f78b7e34f6818d"
+            ]
+        ]
+    },
+    {
+        "id": "735d452f2c92be61",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Magenta",
+        "measurement": "tonermagenta",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1120,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "198b86f615ccc489",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.2\n\n\n",
+        "name": "",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "c085b29c0516a71a"
+            ]
+        ]
+    },
+    {
+        "id": "1ffaac0512322d69",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 280,
+        "wires": [
+            [
+                "042b9c4ebbd5c20a"
+            ]
+        ]
+    },
+    {
+        "id": "d3c92562d1c1721c",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Schwarz Photo",
+        "measurement": "tonerblackphoto",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1140,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e3695730d355b4bf",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.3\n\n\n",
+        "name": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "1ffaac0512322d69"
+            ]
+        ]
+    },
+    {
+        "id": "e5912b987f337239",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "f6f76b8a3903e9ef"
+            ]
+        ]
+    },
+    {
+        "id": "ee55f639ced88de0",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Cyan",
+        "measurement": "tonercyan",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1110,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a6e7d8eb77c91411",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.4\n\n\n",
+        "name": "",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "e5912b987f337239"
+            ]
+        ]
+    },
+    {
+        "id": "63ac39585996837a",
+        "type": "comment",
+        "z": "07581e02265d8f2e",
+        "name": "Aktualiserung alle 1h",
+        "info": "",
+        "x": 160,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "50cc5f4be5668ae2",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.5",
+        "name": "",
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "64c691634977b0af"
+            ]
+        ]
+    },
+    {
+        "id": "64c691634977b0af",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [
+                "304630a76ada42fd"
+            ]
+        ]
+    },
+    {
+        "id": "f696129bed1d2563",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.6",
+        "name": "",
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "0888f4e7d1b9bafa"
+            ]
+        ]
+    },
+    {
+        "id": "d491530566a14564",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.7",
+        "name": "",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "f9cc9ab0f39695a2"
+            ]
+        ]
+    },
+    {
+        "id": "9fc0be035a4810e8",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.8",
+        "name": "",
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "acc0ae7a48fdaea6"
+            ]
+        ]
+    },
+    {
+        "id": "f0ad8facac53a0a7",
+        "type": "snmp",
+        "z": "07581e02265d8f2e",
+        "host": "10.193.8.101",
+        "version": "2c",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "1.3.6.1.2.1.43.11.1.1.9.1.9",
+        "name": "",
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "b1bd415b62b482c2"
+            ]
+        ]
+    },
+    {
+        "id": "0888f4e7d1b9bafa",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "7245dc154cbbecd9"
+            ]
+        ]
+    },
+    {
+        "id": "f9cc9ab0f39695a2",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 520,
+        "wires": [
+            [
+                "0962071c5113dacc",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "acc0ae7a48fdaea6",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "9027ea3ee1dd978f",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "b1bd415b62b482c2",
+        "type": "change",
+        "z": "07581e02265d8f2e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.value)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "87c4ea17718fdbb3",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "974e0bb8366d69e2",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Rot",
+        "measurement": "tonerred",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1100,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "765e489f37ec2c4b",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Toner Schwarz Matt",
+        "measurement": "tonerblackmatte",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1130,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0962071c5113dacc",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Wartung T6997",
+        "measurement": "MainT6997",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1120,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9027ea3ee1dd978f",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Wartung 2 T6997",
+        "measurement": "Main2T6997",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1130,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "87c4ea17718fdbb3",
+        "type": "influxdb out",
+        "z": "07581e02265d8f2e",
+        "influxdb": "a9be0f7cbc36001c",
+        "name": "Wartung 3 T6997",
+        "measurement": "Main3T6997",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1130,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "982a4807dc77e0d3",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "d3c92562d1c1721c",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "10f78b7e34f6818d",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 220,
+        "wires": [
+            [
+                "765e489f37ec2c4b",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "042b9c4ebbd5c20a",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "ee55f639ced88de0",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "f6f76b8a3903e9ef",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 340,
+        "wires": [
+            [
+                "735d452f2c92be61",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "304630a76ada42fd",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 400,
+        "wires": [
+            [
+                "d434d0c25137a0a9",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "7245dc154cbbecd9",
+        "type": "calculator",
+        "z": "07581e02265d8f2e",
+        "name": "Multiply 2,4",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "2.4",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": "0",
+        "x": 850,
+        "y": 460,
+        "wires": [
+            [
+                "974e0bb8366d69e2",
+                "8313d17d9be46647"
+            ]
+        ]
+    },
+    {
+        "id": "8fbf22beb25c8fe6",
+        "type": "comment",
+        "z": "07581e02265d8f2e",
+        "name": "Calculations",
+        "info": "mal 2,4 = Mililiter\nOriginalwert = Prozent",
+        "x": 870,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a9be0f7cbc36001c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "pl1",
+        "name": "PL1-DB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    }
+]
