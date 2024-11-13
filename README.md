@@ -40,18 +40,18 @@ There are some thresholds deposit, if the filling level falls below 10%.
 
 ![node-red-contrib-calc](https://flows.nodered.org/node/node-red-contrib-calc)
 
-## Node Red-Flow in Mililiter
+## Node Red-Flow in Milliliter
 
 ![Zwischenablage_11-13-2024_01](https://github.com/user-attachments/assets/43b716f7-ed5e-4270-8b29-d08e52d33dda)
 
-## Grafana in Mililiter
+## Grafana in Milliliter
 
 ![Zwischenablage_11-13-2024_02](https://github.com/user-attachments/assets/53aa3cdc-b20c-4762-9a34-00a5f1da63e2)
 
 # Math
 
 The value that read out over the SNMP Connection is the value in percent.<br>
-If you net the value in mililiter multiply 2,4 to that value.
+If you net the value in milliliter multiply 2,4 to that value.
 
 
 -------------------------------------------
