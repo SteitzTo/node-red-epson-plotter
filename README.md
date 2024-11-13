@@ -33,15 +33,18 @@ There are some thresholds deposit, if the filling level falls below 10%.
 
 <br>
 <br>
+
 # If you want to see your Values in Mililiter try this way:
 
 ## Dependencies:
 
-[node-red-contrib-calc]((https://flows.nodered.org/node/node-red-contrib-calc)
+![node-red-contrib-calc](https://flows.nodered.org/node/node-red-contrib-calc)
+
+## Node Red-Flow
 
 ![Zwischenablage_11-13-2024_01](https://github.com/user-attachments/assets/43b716f7-ed5e-4270-8b29-d08e52d33dda)
 
-## Grafana in ml
+## Grafana in Mililiter
 
 ![Zwischenablage_11-13-2024_02](https://github.com/user-attachments/assets/53aa3cdc-b20c-4762-9a34-00a5f1da63e2)
 
