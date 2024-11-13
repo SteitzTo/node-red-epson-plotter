@@ -34,7 +34,7 @@ There are some thresholds deposit, if the filling level falls below 10%.
 <br>
 <br>
 
-# If you want to see your Values in Mililiter try this way:
+# If you want to see your Values in Milliliter try this way:
 
 ## Dependencies:
 
